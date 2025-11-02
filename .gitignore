@@ -1,0 +1,6 @@
+# Archivos y carpetas que no deben subirse
+/vendor/
+.env
+*.log
+.DS_Store
+Thumbs.db
