@@ -1,0 +1,262 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+min-height: 100vh;
+padding: 20px;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+}
+/* Headers */
+.header {
+text-align: center;
+color: white;
+margin-bottom: 30px;
+}
+.header h1 {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+.header p {
+font-size: 1.1em;
+opacity: 0.9;
+}
+/* Botones */
+.btn {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-block;
+}
+.btn-primary {
+background-color: #667eea;
+color: white;
+}
+.btn-primary:hover {
+background-color: #5568d3;
+}
+.btn-secondary {
+background-color: #48bb78;
+color: white;
+padding: 5px 15px;
+font-size: 0.9em;
+}
+.btn-secondary:hover {
+background-color: #38a169;
+}
+.btn-danger {
+background-color: #f56565;
+color: white;
+padding: 5px 15px;
+font-size: 0.9em;
+}
+.btn-danger:hover {
+background-color: #e53e3e;
+}
+.btn-group {
+margin-bottom: 20px;
+}
+/* Alertas */
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border-radius: 5px;
+}
+.alert-success {
+background-color: #c6f6d5;
+color: #22543d;
+border: 1px solid #9ae6b4;
+}
+.alert-error {
+background-color: #fed7d7;
+color: #742a2a;
+border: 1px solid #fc8181;
+}
+/* Tarjetas de entrada */
+.entry-card {
+background: white;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 15px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.entry-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+.entry-date {
+font-weight: bold;
+color: #333;
+font-size: 1.1em;
+}
+.entry-mood {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.mood-emoji {
+font-size: 2.5em;
+}
+.mood-text {
+font-weight: 600;
+color: #667eea;
+}
+.entry-notes {
+margin-top: 10px;
+color: #555;
+line-height: 1.6;
+}
+.entry-actions {
+margin-top: 15px;
+display: flex;
+gap: 10px;
+}
+.empty {
+text-align: center;
+color: white;
+padding: 40px;
+font-size: 1.2em;
+}
+/* Formularios */
+.form-container {
+background: white;
+border-radius: 10px;
+padding: 40px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+max-width: 500px;
+margin: 0 auto;
+}
+.form-container h2 {
+color: #333;
+margin-bottom: 30px;
+text-align: center;
+}
+.form-group {
+margin-bottom: 20px;
+}
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: #333;
+font-weight: 600;
+}
+.form-group input[type="date"],
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 2px solid #e2e8f0;
+border-radius: 5px;
+font-family: inherit;
+font-size: 1em;
+transition: border-color 0.3s;
+}
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: #667eea;
+}
+.form-group textarea {
+resize: vertical;
+min-height: 100px;
+}
+.mood-options {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+.mood-option {
+flex: 1;
+min-width: 80px;
+}
+.mood-option input[type="radio"] {
+display: none;
+}
+.mood-option label {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px;
+border: 2px solid #e2e8f0;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s;
+margin-bottom: 0;
+}
+.mood-option input[type="radio"]:checked + label {
+border-color: #667eea;
+background-color: #f0f4ff;
+}
+.mood-emoji-form {
+font-size: 2em;
+margin-bottom: 5px;
+}
+.mood-text-form {
+font-size: 0.9em;
+font-weight: 600;
+color: #333;
+}
+.form-actions {
+display: flex;
+gap: 10px;
+margin-top: 30px;
+}
+.form-actions button,
+.form-actions a {
+flex: 1;
+padding: 12px;
+border: none;
+border-radius: 5px;
+font-size: 1em;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s;
+text-align: center;
+}
+.form-actions .btn-primary {
+flex: 1;
+}
+.form-actions .btn-cancel {
+background-color: #e2e8f0;
+color: #333;
+text-decoration: none;
+}
+.form-actions .btn-cancel:hover {
+background-color: #cbd5e0;
+}
+.error-message {
+color: #f56565;
+font-size: 0.9em;
+margin-top: 5px;
+}
+/* Responsivo */
+@media (max-width: 600px) {
+.header h1 {
+font-size: 2em;
+}
+.form-container {
+padding: 20px;
+}
+.entry-header {
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+}
+.mood-options {
+gap: 5px;
+}
+.mood-option label {
+padding: 10px;
+}
+}
