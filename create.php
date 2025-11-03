@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_ . '/db.php';
+require_once __DIR__ . '/db.php';
 
 $errors = [];
 $form_data = [
